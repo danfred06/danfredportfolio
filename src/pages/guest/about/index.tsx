@@ -1,55 +1,50 @@
-const profilePhoto = "/danfred.jpg";
 export default function AboutPage() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="max-w-3xl">
-        {/* Section Label */}
-        <p className="text-blue-600 font-semibold text-sm uppercase tracking-wider">
+
+        <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
           About Me
         </p>
 
-        {/* Profile Image */}
-        <div className="w-48 h-48 mt-6">
+        <div className="mt-6 h-48 w-48">
           <img
-            src={profilePhoto}
+            src="/danfred.jpg"
             alt="Danfred Ando"
-            className="w-full h-full object-cover rounded-full shadow-lg"
+            className="h-full w-full rounded-full object-cover shadow-lg"
           />
         </div>
 
-        {/* Heading */}
-        <h1 className="mt-6 text-4xl sm:text-5xl font-bold text-gray-900">
+        <h1 className="mt-6 text-4xl font-bold text-gray-900 sm:text-5xl">
           Hi, I'm Danfred Ando
         </h1>
 
-        {/* Introduction */}
         <p className="mt-6 text-lg leading-8 text-gray-600">
           I'm Danfred Ando, a passionate and aspiring technology enthusiast
           who enjoys learning about web development and creating modern,
           user-friendly digital experiences.
         </p>
 
-        {/* Additional Information */}
         <p className="mt-4 text-lg leading-8 text-gray-600">
-          I’m continuously improving my skills in programming and technology,
+          I'm continuously improving my skills in programming and technology,
           while exploring new ideas and building projects that turn creative
           concepts into functional websites and applications.
         </p>
 
-        {/* Skills */}
         <div className="mt-8 flex flex-wrap gap-3">
-          <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
+          <span className="rounded-full bg-blue-100 px-4 py-2 font-medium text-blue-700">
             Web Development
           </span>
 
-          <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
+          <span className="rounded-full bg-blue-100 px-4 py-2 font-medium text-blue-700">
             Technology
           </span>
 
-          <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
+          <span className="rounded-full bg-blue-100 px-4 py-2 font-medium text-blue-700">
             Programming
           </span>
         </div>
+
       </div>
     </section>
   );

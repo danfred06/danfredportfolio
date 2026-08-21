@@ -1,38 +1,34 @@
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
+
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/common/section";
 
 export function HomePageBannerSection() {
   return (
-    <Section className="py-20 md:py-32 bg-gradient-to-br from-blue-50 via-white to-indigo-50 border-b border-gray-200">
-      <div className="max-w-4xl mx-auto text-center space-y-7">
+    <Section className="border-b border-gray-200 bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 md:py-32">
+      <div className="mx-auto max-w-4xl space-y-7 text-center">
 
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-blue-100 text-blue-700 border border-blue-200">
-          <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+        <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
+          <span className="h-2 w-2 animate-pulse rounded-full bg-blue-600" />
           Welcome to My Portfolio
         </div>
 
-        {/* Heading */}
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
+        <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-gray-900 md:text-6xl">
           Hi, I'm{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+          <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
             Danfred Ando
           </span>
         </h1>
 
-        {/* Subtitle */}
-        <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+        <p className="mx-auto max-w-3xl text-lg leading-relaxed text-gray-600 md:text-xl">
           I'm a passionate technology enthusiast and aspiring web developer
           who enjoys creating modern, responsive, and user-friendly websites
           using React, Tailwind CSS, and modern web technologies.
         </p>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-5">
-
+        <div className="flex flex-col items-center justify-center gap-4 pt-5 sm:flex-row">
           <NavLink to="/about">
-            <Button className="w-full sm:w-auto text-base px-8 h-12 shadow-lg shadow-blue-500/20">
+            <Button className="h-12 w-full px-8 text-base shadow-lg shadow-blue-500/20 sm:w-auto">
               About Me
             </Button>
           </NavLink>
@@ -40,31 +36,27 @@ export function HomePageBannerSection() {
           <NavLink to="/contact">
             <Button
               variant="secondary"
-              className="w-full sm:w-auto text-base px-8 h-12 bg-white hover:bg-gray-50 border border-gray-200 text-gray-700"
+              className="h-12 w-full border border-gray-200 bg-white px-8 text-base text-gray-700 hover:bg-gray-50 sm:w-auto"
             >
               Contact Me
             </Button>
           </NavLink>
-
         </div>
 
-        {/* Skills */}
-        <div className="pt-8 flex flex-wrap justify-center gap-3">
-          <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 shadow-sm">
-            React
-          </span>
-
-          <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 shadow-sm">
-            Tailwind CSS
-          </span>
-
-          <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 shadow-sm">
-            JavaScript
-          </span>
-
-          <span className="px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-700 shadow-sm">
-            Web Development
-          </span>
+        <div className="flex flex-wrap justify-center gap-3 pt-8">
+          {[
+            "React",
+            "Tailwind CSS",
+            "JavaScript",
+            "Web Development",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="rounded-full border border-gray-200 bg-white px-4 py-2 text-gray-700 shadow-sm"
+            >
+              {skill}
+            </span>
+          ))}
         </div>
 
       </div>
